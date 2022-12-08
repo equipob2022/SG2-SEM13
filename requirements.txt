@@ -1,10 +1,10 @@
-streamlit
-pandas
-base58
-matplotlib
-numpy
+streamlit==0.68.1
+pandas==0.25.3
+base58==2.0.0
+matplotlib==3.1.3
+numpy==1.18.1
 yfinance==0.1.54
-lxml
+lxml==4.5.1
 pandas_datareader
 tensorflow
 keras
