@@ -120,9 +120,3 @@ def app():
 
     st.write(df1)
 
-
-    st.write(np.__version__)
-    st.write(pd.__version__)
-    st.write(data2.__version__)
-    st.write(go.__version__)
-
