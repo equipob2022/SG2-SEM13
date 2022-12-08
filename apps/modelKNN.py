@@ -1,15 +1,11 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import pandas_datareader as data2
-from tensorflow.python.keras.models import load_model
 import plotly.graph_objects as go
 import plotly.express as px
 from sklearn import neighbors
 import math
-import datetime as dt
-from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score, r2_score 
-from sklearn.metrics import mean_poisson_deviance, mean_gamma_deviance, accuracy_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error, explained_variance_score 
 import streamlit as st
 
 def app():

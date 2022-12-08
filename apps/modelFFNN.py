@@ -1,9 +1,9 @@
+import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import pandas_datareader as datas
 from tensorflow.python.keras.models import load_model
-import streamlit as st
 ##
 from sklearn import metrics
 import plotly.express as px

@@ -1,17 +1,11 @@
+import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import pandas_datareader as data
-from tensorflow.python.keras.models import load_model
-from sklearn import svm
 from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
 from sklearn import metrics
-from sklearn.metrics import roc_curve, auc
 import plotly.graph_objects as go
 import plotly.express as px
-import streamlit as st
 
 def app():
     st.title('Model - Decision Tree')
