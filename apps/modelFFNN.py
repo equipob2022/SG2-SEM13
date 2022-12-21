@@ -7,11 +7,12 @@ from tensorflow.python.keras.models import load_model
 ##
 from sklearn import metrics
 import plotly.express as px
+import yfinance as yf
 ##
 
 def app():
     st.title('FeedForward Neural Network')
-
+    
     #start = '2004-08-18'
     #end = '2022-01-20'
     start = st.date_input('Start' , value=pd.to_datetime('2004-08-18'))
@@ -20,6 +21,8 @@ def app():
     st.title('Predicción de tendencia de acciones')
 
     user_input = st.text_input('Introducir cotización bursátil' , 'GC=F')
+    
+    yf.pdr_override()
 
     df = pdr.get_data_yahoo(user_input, 'yahoo', start, end)
 
