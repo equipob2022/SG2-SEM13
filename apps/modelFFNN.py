@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import pandas_datareader as datas
+from pandas_datareader import data as pdr
 from tensorflow.python.keras.models import load_model
 ##
 from sklearn import metrics
@@ -21,7 +21,7 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'GC=F')
 
-    df = datas.DataReader(user_input, 'yahoo', start, end)
+    df = pdr.get_data_yahoo(user_input, 'yahoo', start, end)
 
     # Describiendo los datos
 
