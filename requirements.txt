@@ -4,7 +4,7 @@ pandas==1.4.2
 pandas_datareader==0.10.0
 matplotlib==3.5.1
 base58==2.0.0
-yfinance==0.1.54
+yfinance==0.2.3
 yfinance
 tensorflow
 keras
