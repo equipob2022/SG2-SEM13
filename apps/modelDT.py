@@ -1,7 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pandas_datareader as data
+from pandas_datareader import data as pdr
+import yfinance as yf
 from sklearn.tree import DecisionTreeRegressor
 from sklearn import metrics
 import plotly.graph_objects as go
@@ -12,6 +13,7 @@ def app():
 
     #start = '2004-08-18'
     #end = '2022-01-20'
+    yf.pdr_override()
     start = st.date_input('Start' , value=pd.to_datetime('2004-08-18'))
     end = st.date_input('End' , value=pd.to_datetime('today'))
 
@@ -19,7 +21,11 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'GC=F')
 
-    df = data.DataReader(user_input, 'yahoo', start, end)
+    lista = [user_input]
+
+    y_symbols = ['SCHAND.NS', 'TATAPOWER.NS', 'ITC.NS']
+
+    df = pdr.get_data_yahoo([user_input], start,end)
 
     # Describiendo los datos
 

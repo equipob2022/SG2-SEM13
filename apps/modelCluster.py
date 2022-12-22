@@ -1,7 +1,8 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import pandas_datareader as data2
+from pandas_datareader import data as pdr
+import yfinance as yf
 from sklearn.preprocessing import Normalizer
 import plotly.graph_objects as go
 from sklearn.pipeline import make_pipeline
@@ -44,6 +45,8 @@ def app():
     "Symantec":"ZR=F",
     "American Express":"ZS=F"}
     
+    yf.pdr_override()
+
     start = st.date_input('Start' , value=pd.to_datetime('2004-08-18'))
     end = st.date_input('End' , value=pd.to_datetime('today'))
 
@@ -51,7 +54,11 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'GC=F')
 
-    df2 = data2.DataReader(user_input, 'yahoo', start, end)
+    lista = [user_input]
+
+    y_symbols = ['SCHAND.NS', 'TATAPOWER.NS', 'ITC.NS']
+
+    df2 = pdr.get_data_yahoo([user_input], start,end)
 
 
     # Describiendo los datos
@@ -80,7 +87,7 @@ def app():
     st.plotly_chart(fig)
     
     
-    df = data2.get_data_yahoo(list(companies_dict.values()),start,end)
+    df = pdr.get_data_yahoo(list(companies_dict.values()),start,end)
 
 
     def clean_dataset(df):

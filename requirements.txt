@@ -5,6 +5,7 @@ pandas_datareader==0.10.0
 matplotlib==3.5.1
 base58==2.0.0
 yfinance==0.1.54
+yfinance
 tensorflow
 keras
 scikit-learn

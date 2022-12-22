@@ -19,7 +19,5 @@ app.add_app("Modelo Decision Tree", modelDT.app)
 app.run()
 
 
-st.write(st.__version__)
-
 
 
