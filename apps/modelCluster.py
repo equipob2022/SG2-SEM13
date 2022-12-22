@@ -54,10 +54,6 @@ def app():
 
     user_input = st.text_input('Introducir cotización bursátil' , 'GC=F')
 
-    lista = [user_input]
-
-    y_symbols = ['SCHAND.NS', 'TATAPOWER.NS', 'ITC.NS']
-
     df2 = pdr.get_data_yahoo([user_input], start,end)
 
 
