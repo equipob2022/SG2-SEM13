@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import datetime as dt
 import matplotlib.pyplot as plt
 from pandas_datareader import data as pdr
 from tensorflow.python.keras.models import load_model
@@ -15,7 +16,7 @@ def app():
     
     #start = '2004-08-18'
     #end = '2022-01-20'
-    start = st.date_input('Start' , value=pd.to_datetime('2004,8,18'))
+    start = st.date_input('Start' , value= dt.datetime(2004,8,18))
     end = st.date_input('End' , value=pd.to_datetime('today'))
 
     st.title('Predicción de tendencia de acciones')
