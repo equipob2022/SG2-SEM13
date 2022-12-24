@@ -145,4 +145,6 @@ def app():
         color="metrica"
     )
     st.plotly_chart(fig2)
+    
+    st.write('El modelo KNN nos permite predecir la tendencia de las acciones respecto al precio de la bolsa de valores de la materia prima Oro. De la data brindada por Yahoo Finance, aplicando el algoritmo, podemos graficar las variables que nos muestra la data. Finalmente, se obtienen como métricas de rendimiento el MAE, MSE y RMSE; incluyendo el TestData para cada una de ellas; además de las métricas de score tales como el Regressor Score y el Regressor Score Trained, donde podemos observar que la metrica de error medio absoluto tiene por valor 12.20051.')
 
