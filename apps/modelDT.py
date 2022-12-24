@@ -136,3 +136,5 @@ def app():
         color="metrica"
     )
     st.plotly_chart(fig)
+    
+    st.write('El modelo Decision Tree nos permite predecir la tendencia de las acciones respecto al precio de la bolsa de valores de la materia prima Oro.Asimismo, se consideró la inclusión de una gráfica que ayude a mostrar los retornos de la estrategia de trama en relación a los rendimientos originales. Finalmente, se obtienen como métricas de rendimiento el MAE, MSE y RMSE donde la métrica de error medio absoluto tiene una valor de 0.5217243.')
