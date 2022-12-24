@@ -191,3 +191,5 @@ def app():
         color="metrica"
     )
     st.plotly_chart(fig)
+    
+    st.write('El modelo FeedForward Neural Network nos permite predecir una de las variables que se vincula el precio de la bolsa de valores de la materia prima Oro, Se realizo una gráfica y tabla las cuales nos permiten mostrar el precio predicho con el precio original de la data. Finalmente, se obtienen como métricas de este modelo el MAE, MSE y RMSE en donde obtiene un error absoluto medio del 20.65436. ')
