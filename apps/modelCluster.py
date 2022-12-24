@@ -122,4 +122,6 @@ def app():
 
 
     st.write(df1)
+    
+    st.write('El modelo de agrupamiento K.Means nos ayuda a agrupar características similares de una determinada data, que para este caso es en relación al precio de la bolsa de valores de la materia prima Oro. Se puede observar con la data de materias primas las empresas etiquetadas con un número y agrupadas según las características de la empresa, los parecidos tienen el mismo número se agrupan en labels iguales, donde las compañías que tengan un parecido en su entrada o salida van a tener el mismo label.')
 
